@@ -4,17 +4,36 @@
   
   
   <entry>
-    <title>基于Linux系统搭建teamspeak</title>
-    <link href="/2020/10/10/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87/"/>
-    <url>/2020/10/10/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87/</url>
+    <title>关于 华硕梅林固件 科学上网离线上传敏感词失败</title>
+    <link href="/2020/10/31/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    <url>/2020/10/31/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</url>
     
-    <content type="html"><![CDATA[<p>loading-</p>]]></content>
+    <content type="html"><![CDATA[<p>问题–<br>检测到离线安装包：shadowsocks_x.x.x.tar.gz 含非法关键词！</p><p>解决–<br>在「系统管理」- 「系统设置」里面打开「Allow SSH password login」<br>用ssh工具连接路由器 <span style="color: #519d9e; ">192.168.50.1</span><br>输入</p><pre><code class="hljs awk">sed -i <span class="hljs-string">&#x27;s/\tdetect_package/\t# detect_package/g&#x27;</span> <span class="hljs-regexp">/koolshare/</span>scripts/ks_tar_install.sh</code></pre><p>over over-</p>]]></content>
     
     
     
     <tags>
       
-      <tag>linux</tag>
+      <tag>经验+1</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于 BootStrap 自适应网站</title>
+    <link href="/2020/10/10/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87/"/>
+    <url>/2020/10/10/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87/</url>
+    
+    <content type="html"><![CDATA[<p>BootStrap css</p><h2 id="移动设备优先"><a href="#移动设备优先" class="headerlink" title="移动设备优先"></a>移动设备优先</h2><pre><code class="hljs routeros">&lt;meta <span class="hljs-attribute">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attribute">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>BootStrap</tag>
       
     </tags>
     
