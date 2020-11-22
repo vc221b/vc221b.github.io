@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>关于 excel密码保护破解</title>
+    <link href="/2020/11/22/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/"/>
+    <url>/2020/11/22/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/</url>
+    
+    <content type="html"><![CDATA[<p>问题–<br>excel密码保护</p><p>解决–<br>输入</p><pre><code class="hljs pgsql">Sub PasswordBreaker()Dim i <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, j <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, k <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>Dim l <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, m <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, n <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>Dim i1 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, i2 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, i3 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>Dim i4 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, i5 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, i6 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span><span class="hljs-keyword">On</span> Error Resume Next<span class="hljs-keyword">For</span> i = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> j = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> k = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span><span class="hljs-keyword">For</span> l = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> m = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> i1 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span><span class="hljs-keyword">For</span> i2 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> i3 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> i4 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span><span class="hljs-keyword">For</span> i5 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> i6 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> n = <span class="hljs-number">32</span> <span class="hljs-keyword">To</span> <span class="hljs-number">126</span>ActiveSheet.Unprotect Chr(i) &amp; Chr(j) &amp; Chr(k) &amp; _Chr(l) &amp; Chr(m) &amp; Chr(i1) &amp; Chr(i2) &amp; Chr(i3) &amp; _Chr(i4) &amp; Chr(i5) &amp; Chr(i6) &amp; Chr(n)<span class="hljs-keyword">If</span> ActiveSheet.ProtectContents = <span class="hljs-keyword">False</span> <span class="hljs-keyword">Then</span>MsgBox &quot;One usable password is &quot; &amp; Chr(i) &amp; Chr(j) &amp; _Chr(k) &amp; Chr(l) &amp; Chr(m) &amp; Chr(i1) &amp; Chr(i2) &amp; _Chr(i3) &amp; Chr(i4) &amp; Chr(i5) &amp; Chr(i6) &amp; Chr(n)ActiveWorkbook.Sheets(<span class="hljs-number">1</span>).<span class="hljs-keyword">Select</span>Range(&quot;a1&quot;).FormulaR1C1 = Chr(i) &amp; Chr(j) &amp; _Chr(k) &amp; Chr(l) &amp; Chr(m) &amp; Chr(i1) &amp; Chr(i2) &amp; _Chr(i3) &amp; Chr(i4) &amp; Chr(i5) &amp; Chr(i6) &amp; Chr(n)<span class="hljs-keyword">Exit</span> Sub<span class="hljs-keyword">End</span> <span class="hljs-keyword">If</span>Next: Next: Next: Next: Next: NextNext: Next: Next: Next: Next: Next<span class="hljs-keyword">End</span> Sub</code></pre><p>over over-</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>经验+1</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于 华硕梅林固件 科学上网离线上传敏感词失败</title>
     <link href="/2020/10/31/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     <url>/2020/10/31/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</url>
