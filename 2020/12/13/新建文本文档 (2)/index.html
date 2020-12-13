@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>关于 excel密码保护破解 - Hexo</title>
+  <title>关于 Dijkstra算法 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -153,8 +153,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-22 14:11" pubdate>
-        November 22, 2020 pm
+      <time datetime="2020-12-13 15:30" pubdate>
+        December 13, 2020 pm
       </time>
     </span>
   
@@ -165,7 +165,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      272 字
+      472 字
     </span>
   
 
@@ -175,7 +175,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      8
        分钟
     </span>
   
@@ -205,39 +205,92 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">关于 excel密码保护破解</h1>
+            <h1 style="display: none">关于 Dijkstra算法</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>问题–<br>excel密码保护</p>
-<p>解决–<br>输入</p>
-<pre><code class="hljs pgsql">Sub PasswordBreaker()
-Dim i <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, j <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, k <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>
-Dim l <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, m <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, n <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>
-Dim i1 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, i2 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, i3 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>
-Dim i4 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, i5 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>, i6 <span class="hljs-keyword">As</span> <span class="hljs-type">Integer</span>
-<span class="hljs-keyword">On</span> Error Resume Next
-<span class="hljs-keyword">For</span> i = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> j = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> k = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>
-<span class="hljs-keyword">For</span> l = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> m = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> i1 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>
-<span class="hljs-keyword">For</span> i2 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> i3 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> i4 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>
-<span class="hljs-keyword">For</span> i5 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> i6 = <span class="hljs-number">65</span> <span class="hljs-keyword">To</span> <span class="hljs-number">66</span>: <span class="hljs-keyword">For</span> n = <span class="hljs-number">32</span> <span class="hljs-keyword">To</span> <span class="hljs-number">126</span>
-ActiveSheet.Unprotect Chr(i) &amp; Chr(j) &amp; Chr(k) &amp; _
-Chr(l) &amp; Chr(m) &amp; Chr(i1) &amp; Chr(i2) &amp; Chr(i3) &amp; _
-Chr(i4) &amp; Chr(i5) &amp; Chr(i6) &amp; Chr(n)
-<span class="hljs-keyword">If</span> ActiveSheet.ProtectContents = <span class="hljs-keyword">False</span> <span class="hljs-keyword">Then</span>
-MsgBox &quot;One usable password is &quot; &amp; Chr(i) &amp; Chr(j) &amp; _
-Chr(k) &amp; Chr(l) &amp; Chr(m) &amp; Chr(i1) &amp; Chr(i2) &amp; _
-Chr(i3) &amp; Chr(i4) &amp; Chr(i5) &amp; Chr(i6) &amp; Chr(n)
-ActiveWorkbook.Sheets(<span class="hljs-number">1</span>).<span class="hljs-keyword">Select</span>
-Range(&quot;a1&quot;).FormulaR1C1 = Chr(i) &amp; Chr(j) &amp; _
-Chr(k) &amp; Chr(l) &amp; Chr(m) &amp; Chr(i1) &amp; Chr(i2) &amp; _
-Chr(i3) &amp; Chr(i4) &amp; Chr(i5) &amp; Chr(i6) &amp; Chr(n)
-<span class="hljs-keyword">Exit</span> Sub
-<span class="hljs-keyword">End</span> <span class="hljs-keyword">If</span>
-Next: Next: Next: Next: Next: Next
-Next: Next: Next: Next: Next: Next
-<span class="hljs-keyword">End</span> Sub</code></pre>
+              <p>Dijkstra算法</p>
+<hr>
+<pre><code class="hljs gcode">Dijkstra<span class="hljs-comment">()</span> &#123;
+  初始化;
+  for<span class="hljs-comment">(循环n次)</span> &#123;
+    u = 使dis[u]最小的还未被访问的顶点的编号;
+    记u为确定值;
+    for<span class="hljs-comment">(从u出发能到达的所有顶点v)</span>&#123;
+      <span class="hljs-keyword">if</span><span class="hljs-comment">(v未被访问 &amp;&amp; 以u为中介点使s到顶点v的最短距离更优)</span>
+        优化dis[v];
+    &#125;
+  &#125;
+&#125;</code></pre>
 
-<p>over over-</p>
+<pre><code class="hljs angelscript"><span class="hljs-comment">//邻接矩阵</span>
+<span class="hljs-built_in">int</span> n, e[maxv][maxv];
+<span class="hljs-built_in">int</span> dis[maxv], pre[maxv];<span class="hljs-comment">// pre用来标注当前结点的前一个结点</span>
+<span class="hljs-built_in">bool</span> vis[maxv] = &#123;<span class="hljs-literal">false</span>&#125;;
+<span class="hljs-built_in">void</span> Dijkstra(<span class="hljs-built_in">int</span> s) &#123;
+  fill(dis, dis + maxv, inf);
+  dis[s] = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) pre[i] = i; <span class="hljs-comment">//初始状态设每个点的前驱为自身</span>
+  <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;
+    <span class="hljs-built_in">int</span> u = <span class="hljs-number">-1</span>, minn = inf;
+    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) &#123;
+      <span class="hljs-keyword">if</span>(visit[j] == <span class="hljs-literal">false</span> &amp;&amp; dis[j] &lt; minn) &#123;
+        u = j;
+        minn = dis[j];
+      &#125;
+    &#125;
+    <span class="hljs-keyword">if</span>(u == <span class="hljs-number">-1</span>) <span class="hljs-keyword">return</span>;
+    visit[u] = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> v = <span class="hljs-number">0</span>; v &lt; n; v++) &#123;
+      <span class="hljs-keyword">if</span>(visit[v] == <span class="hljs-literal">false</span> &amp;&amp; e[u][v] != inf &amp;&amp; dis[u] + e[u][v] &lt; dis[v]) &#123;
+        dis[v] = dis[u] + e[u][v];
+        pre[v] = u; <span class="hljs-comment">// pre用来标注当前结点的前一个结点</span>
+      &#125;
+    &#125;
+  &#125;
+&#125;</code></pre>
+
+<pre><code class="hljs angelscript"><span class="hljs-comment">//邻接表</span>
+struct node &#123;
+  <span class="hljs-built_in">int</span> v, dis;
+&#125;
+vector&lt;node&gt; e[maxv];
+<span class="hljs-built_in">int</span> n;
+<span class="hljs-built_in">int</span> dis[maxv], pre[maxv];<span class="hljs-comment">// pre用来标注当前结点的前一个结点</span>
+<span class="hljs-built_in">bool</span> visit[maxv] = &#123;<span class="hljs-literal">false</span>&#125;;
+<span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) pre[i] = i; <span class="hljs-comment">//初始状态设每个点的前驱为自身</span>
+<span class="hljs-built_in">void</span> Dijkstra(<span class="hljs-built_in">int</span> s) &#123;
+  fill(dis, dis + maxv, inf);
+  dis[s] = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;
+    <span class="hljs-built_in">int</span> u = <span class="hljs-number">-1</span>, minn = inf;
+    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) &#123;
+      <span class="hljs-keyword">if</span>(visit[j] == <span class="hljs-literal">false</span> &amp;&amp; dis[j] &lt; minn) &#123;
+        u = j;
+        minn = dis[j];
+      &#125;
+    &#125;
+    <span class="hljs-keyword">if</span>(u == <span class="hljs-number">-1</span>) <span class="hljs-keyword">return</span> ;
+    visit[u] = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; e[u].size(); j++) &#123;
+      <span class="hljs-built_in">int</span> v = e[u][j].v;
+      <span class="hljs-keyword">if</span>(visit[v] == <span class="hljs-literal">false</span> &amp;&amp; dis[u] + e[u][j].dis &lt; dis[v]) &#123;
+        dis[v] = dis[u] + e[u][j].dis;
+        pre[v] = u;
+      &#125;
+    &#125;
+  &#125;
+&#125;</code></pre>
+
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-keyword">int</span> s, <span class="hljs-keyword">int</span> v)</span> </span>&#123;
+  <span class="hljs-keyword">if</span>(v == s) &#123;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, s);
+    <span class="hljs-keyword">return</span> ;
+  &#125;
+  dfs(s, pre[v]);
+  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, v);
+&#125;</code></pre>
+
+<pre><code class="hljs plain"></code></pre>
 
             </div>
             <hr>
@@ -248,7 +301,7 @@ Next: Next: Next: Next: Next: Next
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E7%BB%8F%E9%AA%8C-1/">经验+1</a>
+                      <a class="hover-with-bg" href="/tags/Dijkstra/">Dijkstra</a>
                     
                   </div>
                 
@@ -261,18 +314,12 @@ Next: Next: Next: Next: Next: Next
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/12/13/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3%20(2)/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">关于 Dijkstra算法</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/10/31/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-                        <span class="hidden-mobile">关于 华硕梅林固件 科学上网离线上传敏感词失败</span>
+                      <a href="/2020/11/22/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/">
+                        <span class="hidden-mobile">关于 excel密码保护破解</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -447,7 +494,7 @@ Next: Next: Next: Next: Next: Next
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "关于 excel密码保护破解&nbsp;",
+        "关于 Dijkstra算法&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
