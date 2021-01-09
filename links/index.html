@@ -13,6 +13,8 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
   <meta name="author" content="John Doe">
@@ -157,56 +159,8 @@
 <div class="row links">
   
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://hexo.fluid-dev.com/docs/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" alt="Fluid Docs" />
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Docs</div>
-            <div class="link-intro">主题使用指南</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" alt="Fluid Repo" />
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Repo</div>
-            <div class="link-intro">主题 GitHub 仓库</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
     
-    <div class="card col-lg-4 col-md-6 col-sm-12">
-      <a href="https://hexo.fluid-dev.com/docs/example/" class="card-body hover-with-bg" target="_blank" rel="noopener">
-        <div class="card-content">
-          
-            <div class="link-avatar my-auto">
-              <img src="/img/favicon.png" srcset="/img/loading.gif" alt="Fluid Example" />
-            </div>
-          
-          <div class="link-text">
-            <div class="link-title">Fluid Example</div>
-            <div class="link-intro">主题操作示例</div>
-          </div>
-        </div>
-      </a>
-    </div>
-  
 </div>
 
               </div>
@@ -266,22 +220,21 @@
 
     
       
-        <!-- LeanCloud 统计PV -->
-        <span id="leancloud-site-pv-container" style="display: none">
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
             总访问量 
-            <span id="leancloud-site-pv"></span>
+            <span id="busuanzi_value_site_pv"></span>
              次
           </span>
       
       
-        <!-- LeanCloud 统计UV -->
-        <span id="leancloud-site-uv-container" style="display: none">
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
             总访客数 
-            <span id="leancloud-site-uv"></span>
+            <span id="busuanzi_value_site_uv"></span>
              人
           </span>
       
-
     
   </div>
 
@@ -315,6 +268,8 @@
   <script  src="/js/clipboard-use.js" ></script>
 
 
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

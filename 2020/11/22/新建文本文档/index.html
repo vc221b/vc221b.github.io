@@ -13,6 +13,8 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
   <meta name="author" content="John Doe">
@@ -150,6 +152,11 @@
             
               <div class="mt-3">
   
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      John Doe
+    </span>
+  
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
@@ -181,6 +188,14 @@
   
 
   
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
   
 </div>
 
@@ -287,6 +302,31 @@ Next: Next: Next: Next: Next: Next
               <article class="comments" id="comments">
                 
                 
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "iw8RvaSigWaqSA5QDLixzzhV-gzGzoHsz",
+          app_key: "BBL957fpfnW6I1Ndcx3zD2CL",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
 
               </article>
             
@@ -361,22 +401,21 @@ Next: Next: Next: Next: Next: Next
 
     
       
-        <!-- LeanCloud 统计PV -->
-        <span id="leancloud-site-pv-container" style="display: none">
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
             总访问量 
-            <span id="leancloud-site-pv"></span>
+            <span id="busuanzi_value_site_pv"></span>
              次
           </span>
       
       
-        <!-- LeanCloud 统计UV -->
-        <span id="leancloud-site-uv-container" style="display: none">
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
             总访客数 
-            <span id="leancloud-site-uv"></span>
+            <span id="busuanzi_value_site_uv"></span>
              人
           </span>
       
-
     
   </div>
 
@@ -410,6 +449,8 @@ Next: Next: Next: Next: Next: Next
   <script  src="/js/clipboard-use.js" ></script>
 
 
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
