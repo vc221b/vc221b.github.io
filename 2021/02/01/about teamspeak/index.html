@@ -19,7 +19,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>关于 Dijkstra算法 - Hexo</title>
+  <title>关于 teamspeak - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -160,8 +160,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-12-13 15:30" pubdate>
-        December 13, 2020 pm
+      <time datetime="2021-02-01 17:41" pubdate>
+        February 1, 2021 pm
       </time>
     </span>
   
@@ -172,7 +172,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      472 字
+      118 字
     </span>
   
 
@@ -182,7 +182,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      2
        分钟
     </span>
   
@@ -220,92 +220,37 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">关于 Dijkstra算法</h1>
+            <h1 style="display: none">关于 teamspeak</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>Dijkstra算法</p>
-<hr>
-<pre><code class="hljs gcode">Dijkstra<span class="hljs-comment">()</span> &#123;
-  初始化;
-  for<span class="hljs-comment">(循环n次)</span> &#123;
-    u = 使dis[u]最小的还未被访问的顶点的编号;
-    记u为确定值;
-    for<span class="hljs-comment">(从u出发能到达的所有顶点v)</span>&#123;
-      <span class="hljs-keyword">if</span><span class="hljs-comment">(v未被访问 &amp;&amp; 以u为中介点使s到顶点v的最短距离更优)</span>
-        优化dis[v];
-    &#125;
-  &#125;
-&#125;</code></pre>
+              <h2 id="teamspeak"><a href="#teamspeak" class="headerlink" title="teamspeak"></a>teamspeak</h2><pre><code class="hljs jboss-cli">yum update
+systemctl start firewalld
+firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=9987/udp</span> <span class="hljs-params">--permanent</span>
+firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=10011/tcp</span> <span class="hljs-params">--permanent</span>
+firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=30033/tcp</span> <span class="hljs-params">--permanent</span>
+firewall-cmd <span class="hljs-params">--reload</span>
 
-<pre><code class="hljs angelscript"><span class="hljs-comment">//邻接矩阵</span>
-<span class="hljs-built_in">int</span> n, e[maxv][maxv];
-<span class="hljs-built_in">int</span> dis[maxv], pre[maxv];<span class="hljs-comment">// pre用来标注当前结点的前一个结点</span>
-<span class="hljs-built_in">bool</span> vis[maxv] = &#123;<span class="hljs-literal">false</span>&#125;;
-<span class="hljs-built_in">void</span> Dijkstra(<span class="hljs-built_in">int</span> s) &#123;
-  fill(dis, dis + maxv, inf);
-  dis[s] = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) pre[i] = i; <span class="hljs-comment">//初始状态设每个点的前驱为自身</span>
-  <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;
-    <span class="hljs-built_in">int</span> u = <span class="hljs-number">-1</span>, minn = inf;
-    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) &#123;
-      <span class="hljs-keyword">if</span>(visit[j] == <span class="hljs-literal">false</span> &amp;&amp; dis[j] &lt; minn) &#123;
-        u = j;
-        minn = dis[j];
-      &#125;
-    &#125;
-    <span class="hljs-keyword">if</span>(u == <span class="hljs-number">-1</span>) <span class="hljs-keyword">return</span>;
-    visit[u] = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> v = <span class="hljs-number">0</span>; v &lt; n; v++) &#123;
-      <span class="hljs-keyword">if</span>(visit[v] == <span class="hljs-literal">false</span> &amp;&amp; e[u][v] != inf &amp;&amp; dis[u] + e[u][v] &lt; dis[v]) &#123;
-        dis[v] = dis[u] + e[u][v];
-        pre[v] = u; <span class="hljs-comment">// pre用来标注当前结点的前一个结点</span>
-      &#125;
-    &#125;
-  &#125;
-&#125;</code></pre>
+useradd teamspeak
+passwd teamspeak
 
-<pre><code class="hljs angelscript"><span class="hljs-comment">//邻接表</span>
-struct node &#123;
-  <span class="hljs-built_in">int</span> v, dis;
-&#125;
-vector&lt;node&gt; e[maxv];
-<span class="hljs-built_in">int</span> n;
-<span class="hljs-built_in">int</span> dis[maxv], pre[maxv];<span class="hljs-comment">// pre用来标注当前结点的前一个结点</span>
-<span class="hljs-built_in">bool</span> visit[maxv] = &#123;<span class="hljs-literal">false</span>&#125;;
-<span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) pre[i] = i; <span class="hljs-comment">//初始状态设每个点的前驱为自身</span>
-<span class="hljs-built_in">void</span> Dijkstra(<span class="hljs-built_in">int</span> s) &#123;
-  fill(dis, dis + maxv, inf);
-  dis[s] = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;
-    <span class="hljs-built_in">int</span> u = <span class="hljs-number">-1</span>, minn = inf;
-    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) &#123;
-      <span class="hljs-keyword">if</span>(visit[j] == <span class="hljs-literal">false</span> &amp;&amp; dis[j] &lt; minn) &#123;
-        u = j;
-        minn = dis[j];
-      &#125;
-    &#125;
-    <span class="hljs-keyword">if</span>(u == <span class="hljs-number">-1</span>) <span class="hljs-keyword">return</span> ;
-    visit[u] = <span class="hljs-literal">true</span>;
-    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> j = <span class="hljs-number">0</span>; j &lt; e[u].size(); j++) &#123;
-      <span class="hljs-built_in">int</span> v = e[u][j].v;
-      <span class="hljs-keyword">if</span>(visit[v] == <span class="hljs-literal">false</span> &amp;&amp; dis[u] + e[u][j].dis &lt; dis[v]) &#123;
-        dis[v] = dis[u] + e[u][j].dis;
-        pre[v] = u;
-      &#125;
-    &#125;
-  &#125;
-&#125;</code></pre>
+tar -xvf teamspeak3-server_linux_amd64-3.6.0.tar.bz2
+mv teamspeak3-server_linux_amd64 teamspeak3
 
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-keyword">int</span> s, <span class="hljs-keyword">int</span> v)</span> </span>&#123;
-  <span class="hljs-keyword">if</span>(v == s) &#123;
-    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, s);
-    <span class="hljs-keyword">return</span> ;
-  &#125;
-  dfs(s, pre[v]);
-  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, v);
-&#125;</code></pre>
+cp -R teamspeak3 <span class="hljs-string">/home/teamspeak/</span>
+chown -R teamspeak<span class="hljs-function">:teamspeak</span> <span class="hljs-string">/home/teamspeak/teamspeak3/</span>
 
-<pre><code class="hljs plain"></code></pre>
+su - teamspeak
+
+<span class="hljs-keyword">cd</span> teamspeak3
+
+touch <span class="hljs-string">.ts3server_license_accepted</span>
+
+<span class="hljs-string">./ts3server_startscript.sh</span> start</code></pre>
+
+<p>问题解决 #linux-解压bz2文件提示tar (child): bzip2: Cannot exec: No such file or directory</p>
+<p>原因，linux下没有bzip2解压工具</p>
+<p>解决办法 在终端输入：yum -y install bzip2</p>
+<p>over </p>
 
             </div>
             <hr>
@@ -316,7 +261,7 @@ vector&lt;node&gt; e[maxv];
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Dijkstra/">Dijkstra</a>
+                      <a class="hover-with-bg" href="/tags/teamspeak/">teamspeak</a>
                     
                   </div>
                 
@@ -329,18 +274,12 @@ vector&lt;node&gt; e[maxv];
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/02/01/about%20teamspeak/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">关于 teamspeak</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/22/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/">
-                        <span class="hidden-mobile">关于 excel密码保护破解</span>
+                      <a href="/2020/12/13/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3%20(2)/">
+                        <span class="hidden-mobile">关于 Dijkstra算法</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -541,7 +480,7 @@ vector&lt;node&gt; e[maxv];
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "关于 Dijkstra算法&nbsp;",
+        "关于 teamspeak&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

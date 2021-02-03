@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>关于 teamspeak</title>
+    <link href="/2021/02/01/about%20teamspeak/"/>
+    <url>/2021/02/01/about%20teamspeak/</url>
+    
+    <content type="html"><![CDATA[<h2 id="teamspeak"><a href="#teamspeak" class="headerlink" title="teamspeak"></a>teamspeak</h2><pre><code class="hljs jboss-cli">yum updatesystemctl start firewalldfirewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=9987/udp</span> <span class="hljs-params">--permanent</span>firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=10011/tcp</span> <span class="hljs-params">--permanent</span>firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=30033/tcp</span> <span class="hljs-params">--permanent</span>firewall-cmd <span class="hljs-params">--reload</span>useradd teamspeakpasswd teamspeaktar -xvf teamspeak3-server_linux_amd64-3.6.0.tar.bz2mv teamspeak3-server_linux_amd64 teamspeak3cp -R teamspeak3 <span class="hljs-string">/home/teamspeak/</span>chown -R teamspeak<span class="hljs-function">:teamspeak</span> <span class="hljs-string">/home/teamspeak/teamspeak3/</span>su - teamspeak<span class="hljs-keyword">cd</span> teamspeak3touch <span class="hljs-string">.ts3server_license_accepted</span><span class="hljs-string">./ts3server_startscript.sh</span> start</code></pre><p>问题解决 #linux-解压bz2文件提示tar (child): bzip2: Cannot exec: No such file or directory</p><p>原因，linux下没有bzip2解压工具</p><p>解决办法 在终端输入：yum -y install bzip2</p><p>over </p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>teamspeak</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于 Dijkstra算法</title>
     <link href="/2020/12/13/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3%20(2)/"/>
     <url>/2020/12/13/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3%20(2)/</url>
