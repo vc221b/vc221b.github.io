@@ -4,11 +4,87 @@
   
   
   <entry>
+    <title>关于hexo插入视频自适应</title>
+    <link href="/2021/02/11/%E5%85%B3%E4%BA%8Ehexo%E6%8F%92%E5%85%A5%E8%A7%86%E9%A2%91%E8%87%AA%E9%80%82%E5%BA%94/"/>
+    <url>/2021/02/11/%E5%85%B3%E4%BA%8Ehexo%E6%8F%92%E5%85%A5%E8%A7%86%E9%A2%91%E8%87%AA%E9%80%82%E5%BA%94/</url>
+    
+    <content type="html"><![CDATA[<h2 id="关于hexo插入视频自适应"><a href="#关于hexo插入视频自适应" class="headerlink" title="关于hexo插入视频自适应"></a>关于hexo插入视频自适应</h2><p>直接嵌入的话就很小(‾◡◝) 也不居中 巴拉巴拉的</p><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//player.bilibili.com/player.html?aid=46019648&amp;bvid=BV1Cb411e7UB&amp;cid=80629423&amp;page=1&quot;</span> <span class="hljs-attr">scrolling</span>=<span class="hljs-string">&quot;no&quot;</span> <span class="hljs-attr">border</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">&quot;no&quot;</span> <span class="hljs-attr">framespacing</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">allowfullscreen</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span></code></pre><p>👇自适应前</p><iframe src="//player.bilibili.com/player.html?aid=46019648&bvid=BV1Cb411e7UB&cid=80629423&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>就很菜(‾◡◝)---<pre><code class="hljs yaml"><span class="hljs-string">&lt;div</span> <span class="hljs-string">style=&quot;position:</span> <span class="hljs-string">relative;</span> <span class="hljs-attr">width:</span> <span class="hljs-number">100</span><span class="hljs-string">%;</span> <span class="hljs-attr">height:</span> <span class="hljs-number">0</span><span class="hljs-string">;</span> <span class="hljs-attr">padding-bottom:</span> <span class="hljs-number">75</span><span class="hljs-string">%;&quot;&gt;</span><span class="hljs-string">&lt;iframe</span> <span class="hljs-string">src=&quot;//player.bilibili.com/player.html?aid=46019648&amp;bvid=BV1Cb411e7UB&amp;cid=80629423&amp;page=1&quot;</span> <span class="hljs-string">scrolling=&quot;no&quot;</span> <span class="hljs-string">border=&quot;0&quot;</span> <span class="hljs-string">frameborder=&quot;no&quot;</span> <span class="hljs-string">framespacing=&quot;0&quot;</span> <span class="hljs-string">allowfullscreen=&quot;true&quot;</span> <span class="hljs-string">style=&quot;position:</span> <span class="hljs-string">absolute;</span> <span class="hljs-attr">width:</span> <span class="hljs-number">100</span><span class="hljs-string">%;</span> <span class="hljs-attr">height:</span> <span class="hljs-number">100</span><span class="hljs-string">%;</span> <span class="hljs-attr">left:</span> <span class="hljs-number">0</span><span class="hljs-string">;</span> <span class="hljs-attr">top:</span> <span class="hljs-number">0</span><span class="hljs-string">;&quot;&gt;</span> <span class="hljs-string">&lt;/iframe&gt;</span><span class="hljs-string">&lt;/div&gt;</span></code></pre>👇自适应后效果<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=46019648&bvid=BV1Cb411e7UB&cid=80629423&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div><p>over </p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>经验+1</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于好听的鸽分享-カワキヲアメク</title>
+    <link href="/2021/02/11/%E5%85%B3%E4%BA%8E%E5%A5%BD%E5%90%AC%E7%9A%84%E9%B8%BD%E5%88%86%E4%BA%AB-%E3%82%AB%E3%83%AF%E3%82%AD%E3%83%B2%E3%82%A2%E3%83%A1%E3%82%AF/"/>
+    <url>/2021/02/11/%E5%85%B3%E4%BA%8E%E5%A5%BD%E5%90%AC%E7%9A%84%E9%B8%BD%E5%88%86%E4%BA%AB-%E3%82%AB%E3%83%AF%E3%82%AD%E3%83%B2%E3%82%A2%E3%83%A1%E3%82%AF/</url>
+    
+    <content type="html"><![CDATA[<h2 id="カワキヲアメク-美波永远滴神-‾◡◝"><a href="#カワキヲアメク-美波永远滴神-‾◡◝" class="headerlink" title="カワキヲアメク 美波永远滴神(‾◡◝)"></a>カワキヲアメク 美波永远滴神(‾◡◝)</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=46019648&bvid=BV1Cb411e7UB&cid=80629423&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>share</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于好听的鸽分享-「花に亡霊」- ヨルシカ【Acoustic Cover】</title>
+    <link href="/2021/02/11/%E5%85%B3%E4%BA%8E%E5%A5%BD%E5%90%AC%E7%9A%84%E9%B8%BD%E5%88%86%E4%BA%AB-%E3%80%8C%E8%8A%B1%E3%81%AB%E4%BA%A1%E9%9C%8A%E3%80%8D-%20%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB%E3%80%90Acoustic%20Cover%E3%80%91/"/>
+    <url>/2021/02/11/%E5%85%B3%E4%BA%8E%E5%A5%BD%E5%90%AC%E7%9A%84%E9%B8%BD%E5%88%86%E4%BA%AB-%E3%80%8C%E8%8A%B1%E3%81%AB%E4%BA%A1%E9%9C%8A%E3%80%8D-%20%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB%E3%80%90Acoustic%20Cover%E3%80%91/</url>
+    
+    <content type="html"><![CDATA[<h2 id="【Yewon】「花に亡霊」-ヨルシカ【Acoustic-Cover】"><a href="#【Yewon】「花に亡霊」-ヨルシカ【Acoustic-Cover】" class="headerlink" title="【Yewon】「花に亡霊」- ヨルシカ【Acoustic Cover】"></a>【Yewon】「花に亡霊」- ヨルシカ【Acoustic Cover】</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=625537940&bvid=BV1Qt4y1y7sL&cid=188684974&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>share</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于好听的鸽分享-勘ぐれい</title>
+    <link href="/2021/02/11/%E5%85%B3%E4%BA%8E%E5%A5%BD%E5%90%AC%E7%9A%84%E9%B8%BD%E5%88%86%E4%BA%AB-%E5%8B%98%E3%81%90%E3%82%8C%E3%81%84/"/>
+    <url>/2021/02/11/%E5%85%B3%E4%BA%8E%E5%A5%BD%E5%90%AC%E7%9A%84%E9%B8%BD%E5%88%86%E4%BA%AB-%E5%8B%98%E3%81%90%E3%82%8C%E3%81%84/</url>
+    
+    <content type="html"><![CDATA[<h2 id="勘ぐれい-ずっと真夜中でいいのに"><a href="#勘ぐれい-ずっと真夜中でいいのに" class="headerlink" title="勘ぐれい - ずっと真夜中でいいのに"></a>勘ぐれい - ずっと真夜中でいいのに</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=373631314&bvid=BV13o4y1o7nV&cid=284767877&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe></div>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>share</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于 teamspeak</title>
     <link href="/2021/02/01/about%20teamspeak/"/>
     <url>/2021/02/01/about%20teamspeak/</url>
     
-    <content type="html"><![CDATA[<h2 id="teamspeak"><a href="#teamspeak" class="headerlink" title="teamspeak"></a>teamspeak</h2><pre><code class="hljs jboss-cli">yum updatesystemctl start firewalldfirewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=9987/udp</span> <span class="hljs-params">--permanent</span>firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=10011/tcp</span> <span class="hljs-params">--permanent</span>firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=30033/tcp</span> <span class="hljs-params">--permanent</span>firewall-cmd <span class="hljs-params">--reload</span>useradd teamspeakpasswd teamspeaktar -xvf teamspeak3-server_linux_amd64-3.6.0.tar.bz2mv teamspeak3-server_linux_amd64 teamspeak3cp -R teamspeak3 <span class="hljs-string">/home/teamspeak/</span>chown -R teamspeak<span class="hljs-function">:teamspeak</span> <span class="hljs-string">/home/teamspeak/teamspeak3/</span>su - teamspeak<span class="hljs-keyword">cd</span> teamspeak3touch <span class="hljs-string">.ts3server_license_accepted</span><span class="hljs-string">./ts3server_startscript.sh</span> start</code></pre><p>问题解决 #linux-解压bz2文件提示tar (child): bzip2: Cannot exec: No such file or directory</p><p>原因，linux下没有bzip2解压工具</p><p>解决办法 在终端输入：yum -y install bzip2</p><p>over </p>]]></content>
+    <content type="html"><![CDATA[<h2 id="关于自建teamspeak的经验"><a href="#关于自建teamspeak的经验" class="headerlink" title="关于自建teamspeak的经验"></a>关于自建teamspeak的经验</h2><pre><code class="hljs jboss-cli">yum updatesystemctl start firewalldfirewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=9987/udp</span> <span class="hljs-params">--permanent</span>firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=10011/tcp</span> <span class="hljs-params">--permanent</span>firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-port=30033/tcp</span> <span class="hljs-params">--permanent</span>firewall-cmd <span class="hljs-params">--reload</span>useradd teamspeakpasswd teamspeaktar -xvf teamspeak3-server_linux_amd64-3.13.3.tar.bz2.tarmv teamspeak3-server_linux_amd64 teamspeak3cp -R teamspeak3 <span class="hljs-string">/home/teamspeak/</span>chown -R teamspeak<span class="hljs-function">:teamspeak</span> <span class="hljs-string">/home/teamspeak/teamspeak3/</span>su - teamspeak<span class="hljs-keyword">cd</span> teamspeak3touch <span class="hljs-string">.ts3server_license_accepted</span><span class="hljs-string">./ts3server_startscript.sh</span> start</code></pre><p>问题解决 #linux-解压bz2文件提示tar (child): bzip2: Cannot exec: No such file or directory</p><p>原因，linux下没有bzip2解压工具</p><p>解决办法 在终端输入：yum -y install bzip2</p><p>over </p>]]></content>
     
     
     
