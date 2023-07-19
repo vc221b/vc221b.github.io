@@ -308,7 +308,7 @@ document.getElementById('loading-box').addEventListener('click',()=> {preloader.
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: '',
+      envId: 'https://twikoo.jyzhpu.com/',
       region: '',
       onCommentLoaded: function () {
         btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
@@ -320,7 +320,7 @@ document.getElementById('loading-box').addEventListener('click',()=> {preloader.
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: '',
+      envId: 'https://twikoo.jyzhpu.com/',
       region: '',
       urls: [window.location.pathname],
       includeReply: false
