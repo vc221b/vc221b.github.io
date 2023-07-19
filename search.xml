@@ -67,6 +67,82 @@
     </entry>
     
     
+    
+    <entry>
+      <title>关于 Dijkstra算法</title>
+      <link href="/posts/c3e2f215.html"/>
+      <url>/posts/c3e2f215.html</url>
+      
+        <content type="html"><![CDATA[<p>Dijkstra算法</p><hr><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Dijkstra<span class="comment">()</span> &#123;</span><br><span class="line">  初始化;</span><br><span class="line">  for<span class="comment">(循环n次)</span> &#123;</span><br><span class="line">    u = 使dis[u]最小的还未被访问的顶点的编号;</span><br><span class="line">    记u为确定值;</span><br><span class="line">    for<span class="comment">(从u出发能到达的所有顶点v)</span>&#123;</span><br><span class="line">      <span class="keyword">if</span><span class="comment">(v未被访问 &amp;&amp; 以u为中介点使s到顶点v的最短距离更优)</span></span><br><span class="line">        优化dis[v];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">//邻接矩阵</span><br><span class="line">int n, e<span class="comment">[maxv]</span><span class="comment">[maxv]</span>;</span><br><span class="line">int dis<span class="comment">[maxv]</span>, pre<span class="comment">[maxv]</span>;// pre用来标注当前结点的前一个结点</span><br><span class="line">bool vis<span class="comment">[maxv]</span> = &#123;false&#125;;</span><br><span class="line">void Dijkstra(int s) &#123;</span><br><span class="line">  fill(dis, dis + maxv, inf);</span><br><span class="line">  dis<span class="comment">[s]</span> = 0;</span><br><span class="line">  for(int i = 0; i &lt; n; i++) pre<span class="comment">[i]</span> = i; //初始状态设每个点的前驱为自身</span><br><span class="line">  for(int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    int u = -1, minn = inf;</span><br><span class="line">    for(int j = 0; j &lt; n; j++) &#123;</span><br><span class="line">      if(visit<span class="comment">[j]</span> == false &amp;&amp; dis<span class="comment">[j]</span> &lt; minn) &#123;</span><br><span class="line">        u = j;</span><br><span class="line">        minn = dis<span class="comment">[j]</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(u == -1) return;</span><br><span class="line">    visit<span class="comment">[u]</span> = true;</span><br><span class="line">    for(int v = 0; v &lt; n; v++) &#123;</span><br><span class="line">      if(visit<span class="comment">[v]</span> == false &amp;&amp; e<span class="comment">[u]</span><span class="comment">[v]</span> != inf &amp;&amp; dis<span class="comment">[u]</span> + e<span class="comment">[u]</span><span class="comment">[v]</span> &lt; dis<span class="comment">[v]</span>) &#123;</span><br><span class="line">        dis<span class="comment">[v]</span> = dis<span class="comment">[u]</span> + e<span class="comment">[u]</span><span class="comment">[v]</span>;</span><br><span class="line">        pre<span class="comment">[v]</span> = u; // pre用来标注当前结点的前一个结点</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">//邻接表</span><br><span class="line">struct node &#123;</span><br><span class="line">  int v, dis;</span><br><span class="line">&#125;</span><br><span class="line">vector&lt;node&gt; e<span class="comment">[maxv]</span>;</span><br><span class="line">int n;</span><br><span class="line">int dis<span class="comment">[maxv]</span>, pre<span class="comment">[maxv]</span>;// pre用来标注当前结点的前一个结点</span><br><span class="line">bool visit<span class="comment">[maxv]</span> = &#123;false&#125;;</span><br><span class="line">for(int i = 0; i &lt; n; i++) pre<span class="comment">[i]</span> = i; //初始状态设每个点的前驱为自身</span><br><span class="line">void Dijkstra(int s) &#123;</span><br><span class="line">  fill(dis, dis + maxv, inf);</span><br><span class="line">  dis<span class="comment">[s]</span> = 0;</span><br><span class="line">  for(int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    int u = -1, minn = inf;</span><br><span class="line">    for(int j = 0; j &lt; n; j++) &#123;</span><br><span class="line">      if(visit<span class="comment">[j]</span> == false &amp;&amp; dis<span class="comment">[j]</span> &lt; minn) &#123;</span><br><span class="line">        u = j;</span><br><span class="line">        minn = dis<span class="comment">[j]</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(u == -1) return ;</span><br><span class="line">    visit<span class="comment">[u]</span> = true;</span><br><span class="line">    for(int j = 0; j &lt; e<span class="comment">[u]</span>.size(); j++) &#123;</span><br><span class="line">      int v = e<span class="comment">[u]</span><span class="comment">[j]</span>.v;</span><br><span class="line">      if(visit<span class="comment">[v]</span> == false &amp;&amp; dis<span class="comment">[u]</span> + e<span class="comment">[u]</span><span class="comment">[j]</span>.dis &lt; dis<span class="comment">[v]</span>) &#123;</span><br><span class="line">        dis<span class="comment">[v]</span> = dis<span class="comment">[u]</span> + e<span class="comment">[u]</span><span class="comment">[j]</span>.dis;</span><br><span class="line">        pre<span class="comment">[v]</span> = u;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void <span class="built_in">dfs</span>(int s, int v) &#123;</span><br><span class="line">  <span class="built_in">if</span>(v == s) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(&quot;%d\n&quot;, s);</span><br><span class="line">    return ;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">dfs</span>(s, pre[v]);</span><br><span class="line">  <span class="built_in">printf</span>(&quot;%d\n&quot;, v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Dijkstra </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>react环境搭建笔记</title>
+      <link href="/posts/eba36bf7.html"/>
+      <url>/posts/eba36bf7.html</url>
+      
+        <content type="html"><![CDATA[<h1>一、学习目标</h1><p>能够说出React是什么<br>能够说出React的特点<br>能够掌握React的基本使用</p><h1>二、React技术概述</h1><p>1、概述</p><p>前端企业中主流：angular.js(过时)、vue(中国人，国内用多)、react(facebook)</p><p><a href="https://zh-hans.reactjs.org/">https://zh-hans.reactjs.org/</a></p><p>作用：用于构建用户界面的JavaScript库，React主要用于构建Web应用</p><p>javascript库：jquery.js , bootstrap.js   原生javascript去开发</p><p>注册。register.js</p><p>设计组件，用户名和密码，单选按钮，用react组件-&gt;UI(user interface)-&gt;后台可以获取到这些信息</p><p>技术选型：听书app, 用什么技术来做</p><p>1）版本更新速度  2）有健全的文档与完善的社区 3）业务场景 4）现在team团队人会什么</p><p>2.特点</p><p>声明式：UI,html代码，所见即所得， react做渲染（将组件展现在页面）</p><p>基于组件：按钮，下拉菜单，标签页，导航栏（可复用）</p><p>学习一次，随处使用：react学习一次，ios，androd,abc,组件都是通用。</p><p>原来做手机app: ios，android-&gt;招两个开发人员</p><p>abc系统：abc系统</p><p>（java:一次编译class，到处运行linux,ios,windows）</p><h1>三、环境安装</h1><p>1 开发环境的工具必须统一（重点)</p><p>进企业-&gt;项目团队-&gt;项目服务器（git 版本管理)-&gt;OA（办公自动）</p><p>jdk11,tomat8,redis(nosql),软件，中间件，微服务springcloud springboot,不好排查</p><p>安装文档-&gt;按安装文档，用软件，中间件，什么样版本</p><p>保证你的环境和team是一致。</p><p>2.下载node.js</p><p>稳定，stable ,正式版</p><p>3.安装node.js</p><p>检查安装版本(&gt;12)，安装是否成功</p><p>node -v</p><p>node在安装就已经给你配置好了path</p><p>java安装-&gt;配置环境变量path</p><p>4.npm</p><p>maven 包管理</p><p>后端：jdbc-&gt;mysql、oracle、sqlserver、db2-&gt;数据库驱动程序mysql5.1 mysql8驱动不一样</p><p>web-&gt;lib,把jar包放进去。</p><p>maven帮助我去维护项目中jar，想要那个我就从maven服务器，所有jar</p><p>npm对js库管理</p><p>前端：jquery.js、bootstrap.js、reactjs</p><p>npm服务器包含所有js插件，js库</p><p>npm install jquery.js</p><p>npm服务器搭建遥远，离我隔个太平洋。</p><p>阿里，新浪-&gt;cnpm器 从npm下js-&gt;国内开发cnpm</p><h1>四、安装react应用</h1><p>1.官网</p><p><a href="https://reactjs.org/">https://reactjs.org/</a></p><p>2.新建目录，存入以后我们开发项目，不要放c</p><p>D:\androidProject</p><p>3.创建一个react应用</p><p>npx create-react-app hello3</p><p>如果不用管理员权限，permitted</p><p>4.运行</p><p>cd hello3</p><p>npm start</p><p>5.常用的端口</p><p>IP:Port</p><p>127.0.0.1 门牌号 中关村大街111号 乐乐酒店</p><p>tomcat 8080这个房间 ，port 酒店中一个房间（35600)-&gt;tomat-&gt;1000以下系统（6666，8888，9999）</p><p>mysql 3306-3309</p><p>oracle 1521-&gt;界面管理server-&gt;自动抢8080-&gt;4张光盘oracle9i 网络设置</p><p>sqlserver 1433</p><p>6.为什么可以react首页面</p><p>vscode-&gt;找到项目，使用文件夹打开</p><p>目录结构：</p><p>node_modules:项目库要用到的js库</p><p>src下面我们自己开发文件</p><p>index.js 入口文件   import App from ‘./App’;  App.js</p><p>App.js 组件</p><p>在工具启动项目：终端-新建终端-&gt;npm start</p><p>package.json配置文件（不用管）</p><h1>五、快速入门</h1><p>1.目录</p><p>. 当前目录</p><p>… 上一级目录</p><p>2.修改两个</p><p>App.js 定义一个组件，返回<div>aab</div>，写完后要export出来，别人才能用</p><p>index.js 入口，引入App.js（注意路径），ReactDOM.rend(),将App组件渲染，指定一个位置<div id='root'></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> react </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JSX语法</title>
+      <link href="/posts/33a5a810.html"/>
+      <url>/posts/33a5a810.html</url>
+      
+        <content type="html"><![CDATA[<h1>一、学习目标</h1><p>知道什么是JSX</p><p>能够使用JSX创建React元素（注意jsx的使用细节）</p><p>能够在JSX中使用JavaScript表达式</p><p>能够使用JSX的条件渲染和列表渲染</p><p>能够给JSX添加样式</p><h1>二、JSX概述</h1><p>1 jsx产生的原因</p><p>代码比较繁琐</p><p>结构不直观</p><p>无法一眼看出描述的结构，不优雅</p><p>用户体验不好</p><p>jsp servlet做一个表格-&gt; out.write(“<html>…</html>”)</p><p>index.css</p><p>.abc{</p><p>}</p><p>html-&gt;<div class="abc"></p><p>jsx与html很像，但是有区别， <div className="abc"></p><h2 id="Shopping-list">Shopping list</h2><p>.instagram</p><p>.whatsApp</p><p>JSX是JavaScript XML 的简写，表示在JavaScript代码中写HTML格式的代码</p><p>优势：声明式语法更加直观，与HTML结构相同，降低了学习成本，提升开发效率</p><p>2 优化</p><p>sql: 搜索商品，sql语句   select * from t_product where pid=1 join order  join user</p><p>开发时，0.2 t_product 1000-&gt;1000000数据 1分钟</p><p>优化不能时效，功能性ok，非功能性(时效)</p><p>没有加索引字段，减少关联查询</p><p>代码：命名是否标准，shangping , sp, 异常抛出(吞了)，for</p><p>结构：项目mvc  解耦  工作细分，前端、后端、DBA、，mvc后端</p><p>view前端传数据(react,vue,jsp)-&gt;接口-&gt;后端（controller:接收参数，不处理具体逻辑-&gt;service(model)来处理业务逻辑-&gt;dao数据层-db)</p><p>3.注意点</p><p>1）React元素的属性名使用驼峰命名法</p><p>ctrl+shift+I 打调试工具</p><p>2）如果没有子节点的React元素可以用 <code>/&gt;</code> 来结束</p><html><head>    <title></title></head><body><p>​<h1></h1></p><pre><code>&lt;div&gt;    &lt;span&gt;abc&lt;/span&gt;&lt;/div&gt;</code></pre></body></html><p>3)推荐使用小括号包裹JSX，从而避免JS中自动插入分号报错</p><p>4  嵌入JS表达式</p><p>知识不是孤岛，新的知识与旧的联系，效率高。</p><p>JSX是来描述页面的结构，我们一般在编写业务逻辑渲染页面的时候，需要涉及到传递值，调用函数，判断条件，循环等，这一些在JSX中都能得到支持。</p><p>jsp servlet</p><p>servlet:去数据库取数据user,userList</p><p>jsp页面展示内容：</p><p>-用户姓名｛<a href="http://user.name">user.name</a>},{name}</p><p>-用户列表 userList-&gt;for-&gt;{<a href="http://user.name">user.name</a>｝</p><p>react也做展示数据</p><p>表达式{name},展示用户列表for</p><p>5.条件渲染</p><p>页面 sex性别：男  女</p><p>数据库：user表sex 字段 什么类型-int varchar  int 0女 1男</p><p>controller: sex 0/1-&gt;{sex} 0/1-&gt;if</p><p>订单表中订单状态：state 下单 1 退单 2 异常 3</p><p>员工表员工状态:int  0 离职 1在职 2休假 3 4 5</p><p>loading场景：客户在和后台发出数据请求，因为网络或数据多，给一个loading,数据正在加载中。</p><p>产品经理，站在用户立场去思考应用的设计。</p><p>一般在定义boolean flag=false;</p><p>&amp;&amp;在什么场景下？</p><p>&amp; 与，针对位 ，不多（源代码 hashmap)</p><p>&amp;&amp;  用户登录-&gt;username,password-&gt;tom,123 短路操作</p><p>与：0*1=0</p><p>if(username.equals(“tom”))&amp;&amp;password.equals(“123”)&amp;&amp;password.equals(“123”)&amp;&amp;password.equals(“123”){</p><p>//登录成功</p><p>}</p><p>写代码语法糖，很不好懂。</p><p>6.列表渲染</p><p>使用数组map()</p><p>map:key和vaue，数据结构，手机号码</p><p>item:当读取第一条数据时，数据放变量，item当前读取出来的那条数据， item就是一项， temp临时变量，要考虑名字意义。</p><p>7.总结</p><p>- JSX是React的核心内容</p><p>- JSX表示在JS代码中写HTML结构，是React声明式的体现</p><p>- 使用JSX配合嵌入的JS表达式、条件渲染、列表渲染、可以描述任意UI结构</p><p>- 推荐使用className的方式给JSX添加样式</p><p>- React完全利用JS语言自身的能力来编写UI，而不是造轮子增强HTML功能</p><p>轮子：A项目中做权限管理（做成模块）， B 和C也要用，不需要再开发权限管理，直接引进来。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JSX </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于 华硕梅林固件 科学上网离线上传敏感词失败</title>
+      <link href="/posts/undefined.html"/>
+      <url>/posts/undefined.html</url>
+      
+        <content type="html"><![CDATA[<p>问题<br>检测到离线安装包：shadowsocks_x.x.x.tar.gz 含非法关键词！</p><p>解决–<br>在「系统管理」- 「系统设置」里面打开「Allow SSH password login」<br>用ssh工具连接路由器 <span style="color: #519d9e; ">192.168.50.1</span><br>输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;s/\tdetect_package/\t# detect_package/g&#x27; /koolshare/scripts/ks_tar_install.sh </span><br></pre></td></tr></table></figure><p>over over-</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 科学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
