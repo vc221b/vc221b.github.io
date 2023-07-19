@@ -88,25 +88,6 @@
     
     
     <entry>
-      <title>react环境搭建笔记</title>
-      <link href="/posts/eba36bf7.html"/>
-      <url>/posts/eba36bf7.html</url>
-      
-        <content type="html"><![CDATA[<h1>一、学习目标</h1><p>能够说出React是什么<br>能够说出React的特点<br>能够掌握React的基本使用</p><h1>二、React技术概述</h1><p>1、概述</p><p>前端企业中主流：angular.js(过时)、vue(中国人，国内用多)、react(facebook)</p><p><a href="https://zh-hans.reactjs.org/">https://zh-hans.reactjs.org/</a></p><p>作用：用于构建用户界面的JavaScript库，React主要用于构建Web应用</p><p>javascript库：jquery.js , bootstrap.js   原生javascript去开发</p><p>注册。register.js</p><p>设计组件，用户名和密码，单选按钮，用react组件-&gt;UI(user interface)-&gt;后台可以获取到这些信息</p><p>技术选型：听书app, 用什么技术来做</p><p>1）版本更新速度  2）有健全的文档与完善的社区 3）业务场景 4）现在team团队人会什么</p><p>2.特点</p><p>声明式：UI,html代码，所见即所得， react做渲染（将组件展现在页面）</p><p>基于组件：按钮，下拉菜单，标签页，导航栏（可复用）</p><p>学习一次，随处使用：react学习一次，ios，androd,abc,组件都是通用。</p><p>原来做手机app: ios，android-&gt;招两个开发人员</p><p>abc系统：abc系统</p><p>（java:一次编译class，到处运行linux,ios,windows）</p><h1>三、环境安装</h1><p>1 开发环境的工具必须统一（重点)</p><p>进企业-&gt;项目团队-&gt;项目服务器（git 版本管理)-&gt;OA（办公自动）</p><p>jdk11,tomat8,redis(nosql),软件，中间件，微服务springcloud springboot,不好排查</p><p>安装文档-&gt;按安装文档，用软件，中间件，什么样版本</p><p>保证你的环境和team是一致。</p><p>2.下载node.js</p><p>稳定，stable ,正式版</p><p>3.安装node.js</p><p>检查安装版本(&gt;12)，安装是否成功</p><p>node -v</p><p>node在安装就已经给你配置好了path</p><p>java安装-&gt;配置环境变量path</p><p>4.npm</p><p>maven 包管理</p><p>后端：jdbc-&gt;mysql、oracle、sqlserver、db2-&gt;数据库驱动程序mysql5.1 mysql8驱动不一样</p><p>web-&gt;lib,把jar包放进去。</p><p>maven帮助我去维护项目中jar，想要那个我就从maven服务器，所有jar</p><p>npm对js库管理</p><p>前端：jquery.js、bootstrap.js、reactjs</p><p>npm服务器包含所有js插件，js库</p><p>npm install jquery.js</p><p>npm服务器搭建遥远，离我隔个太平洋。</p><p>阿里，新浪-&gt;cnpm器 从npm下js-&gt;国内开发cnpm</p><h1>四、安装react应用</h1><p>1.官网</p><p><a href="https://reactjs.org/">https://reactjs.org/</a></p><p>2.新建目录，存入以后我们开发项目，不要放c</p><p>D:\androidProject</p><p>3.创建一个react应用</p><p>npx create-react-app hello3</p><p>如果不用管理员权限，permitted</p><p>4.运行</p><p>cd hello3</p><p>npm start</p><p>5.常用的端口</p><p>IP:Port</p><p>127.0.0.1 门牌号 中关村大街111号 乐乐酒店</p><p>tomcat 8080这个房间 ，port 酒店中一个房间（35600)-&gt;tomat-&gt;1000以下系统（6666，8888，9999）</p><p>mysql 3306-3309</p><p>oracle 1521-&gt;界面管理server-&gt;自动抢8080-&gt;4张光盘oracle9i 网络设置</p><p>sqlserver 1433</p><p>6.为什么可以react首页面</p><p>vscode-&gt;找到项目，使用文件夹打开</p><p>目录结构：</p><p>node_modules:项目库要用到的js库</p><p>src下面我们自己开发文件</p><p>index.js 入口文件   import App from ‘./App’;  App.js</p><p>App.js 组件</p><p>在工具启动项目：终端-新建终端-&gt;npm start</p><p>package.json配置文件（不用管）</p><h1>五、快速入门</h1><p>1.目录</p><p>. 当前目录</p><p>… 上一级目录</p><p>2.修改两个</p><p>App.js 定义一个组件，返回<div>aab</div>，写完后要export出来，别人才能用</p><p>index.js 入口，引入App.js（注意路径），ReactDOM.rend(),将App组件渲染，指定一个位置<div id='root'></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> react </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>JSX语法</title>
       <link href="/posts/33a5a810.html"/>
       <url>/posts/33a5a810.html</url>
@@ -118,6 +99,25 @@
         <tags>
             
             <tag> JSX </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>react环境搭建笔记</title>
+      <link href="/posts/eba36bf7.html"/>
+      <url>/posts/eba36bf7.html</url>
+      
+        <content type="html"><![CDATA[<h1>一、学习目标</h1><p>能够说出React是什么<br>能够说出React的特点<br>能够掌握React的基本使用</p><h1>二、React技术概述</h1><p>1、概述</p><p>前端企业中主流：angular.js(过时)、vue(中国人，国内用多)、react(facebook)</p><p><a href="https://zh-hans.reactjs.org/">https://zh-hans.reactjs.org/</a></p><p>作用：用于构建用户界面的JavaScript库，React主要用于构建Web应用</p><p>javascript库：jquery.js , bootstrap.js   原生javascript去开发</p><p>注册。register.js</p><p>设计组件，用户名和密码，单选按钮，用react组件-&gt;UI(user interface)-&gt;后台可以获取到这些信息</p><p>技术选型：听书app, 用什么技术来做</p><p>1）版本更新速度  2）有健全的文档与完善的社区 3）业务场景 4）现在team团队人会什么</p><p>2.特点</p><p>声明式：UI,html代码，所见即所得， react做渲染（将组件展现在页面）</p><p>基于组件：按钮，下拉菜单，标签页，导航栏（可复用）</p><p>学习一次，随处使用：react学习一次，ios，androd,abc,组件都是通用。</p><p>原来做手机app: ios，android-&gt;招两个开发人员</p><p>abc系统：abc系统</p><p>（java:一次编译class，到处运行linux,ios,windows）</p><h1>三、环境安装</h1><p>1 开发环境的工具必须统一（重点)</p><p>进企业-&gt;项目团队-&gt;项目服务器（git 版本管理)-&gt;OA（办公自动）</p><p>jdk11,tomat8,redis(nosql),软件，中间件，微服务springcloud springboot,不好排查</p><p>安装文档-&gt;按安装文档，用软件，中间件，什么样版本</p><p>保证你的环境和team是一致。</p><p>2.下载node.js</p><p>稳定，stable ,正式版</p><p>3.安装node.js</p><p>检查安装版本(&gt;12)，安装是否成功</p><p>node -v</p><p>node在安装就已经给你配置好了path</p><p>java安装-&gt;配置环境变量path</p><p>4.npm</p><p>maven 包管理</p><p>后端：jdbc-&gt;mysql、oracle、sqlserver、db2-&gt;数据库驱动程序mysql5.1 mysql8驱动不一样</p><p>web-&gt;lib,把jar包放进去。</p><p>maven帮助我去维护项目中jar，想要那个我就从maven服务器，所有jar</p><p>npm对js库管理</p><p>前端：jquery.js、bootstrap.js、reactjs</p><p>npm服务器包含所有js插件，js库</p><p>npm install jquery.js</p><p>npm服务器搭建遥远，离我隔个太平洋。</p><p>阿里，新浪-&gt;cnpm器 从npm下js-&gt;国内开发cnpm</p><h1>四、安装react应用</h1><p>1.官网</p><p><a href="https://reactjs.org/">https://reactjs.org/</a></p><p>2.新建目录，存入以后我们开发项目，不要放c</p><p>D:\androidProject</p><p>3.创建一个react应用</p><p>npx create-react-app hello3</p><p>如果不用管理员权限，permitted</p><p>4.运行</p><p>cd hello3</p><p>npm start</p><p>5.常用的端口</p><p>IP:Port</p><p>127.0.0.1 门牌号 中关村大街111号 乐乐酒店</p><p>tomcat 8080这个房间 ，port 酒店中一个房间（35600)-&gt;tomat-&gt;1000以下系统（6666，8888，9999）</p><p>mysql 3306-3309</p><p>oracle 1521-&gt;界面管理server-&gt;自动抢8080-&gt;4张光盘oracle9i 网络设置</p><p>sqlserver 1433</p><p>6.为什么可以react首页面</p><p>vscode-&gt;找到项目，使用文件夹打开</p><p>目录结构：</p><p>node_modules:项目库要用到的js库</p><p>src下面我们自己开发文件</p><p>index.js 入口文件   import App from ‘./App’;  App.js</p><p>App.js 组件</p><p>在工具启动项目：终端-新建终端-&gt;npm start</p><p>package.json配置文件（不用管）</p><h1>五、快速入门</h1><p>1.目录</p><p>. 当前目录</p><p>… 上一级目录</p><p>2.修改两个</p><p>App.js 定义一个组件，返回<div>aab</div>，写完后要export出来，别人才能用</p><p>index.js 入口，引入App.js（注意路径），ReactDOM.rend(),将App组件渲染，指定一个位置<div id='root'></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> react </tag>
             
         </tags>
       

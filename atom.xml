@@ -107,6 +107,33 @@
   </entry>
   
   <entry>
+    <title>JSX语法</title>
+    <link href="https://blog.jyzhpu.com/posts/33a5a810.html"/>
+    <id>https://blog.jyzhpu.com/posts/33a5a810.html</id>
+    <published>2021-07-20T07:22:14.000Z</published>
+    <updated>2023-07-19T10:10:55.299Z</updated>
+    
+    <content type="html"><![CDATA[<h1>一、学习目标</h1><p>知道什么是JSX</p><p>能够使用JSX创建React元素（注意jsx的使用细节）</p><p>能够在JSX中使用JavaScript表达式</p><p>能够使用JSX的条件渲染和列表渲染</p><p>能够给JSX添加样式</p><h1>二、JSX概述</h1><p>1 jsx产生的原因</p><p>代码比较繁琐</p><p>结构不直观</p><p>无法一眼看出描述的结构，不优雅</p><p>用户体验不好</p><p>jsp servlet做一个表格-&gt; out.write(“<html>…</html>”)</p><p>index.css</p><p>.abc{</p><p>}</p><p>html-&gt;<div class="abc"></p><p>jsx与html很像，但是有区别， <div className="abc"></p><h2 id="Shopping-list">Shopping list</h2><p>.instagram</p><p>.whatsApp</p><p>JSX是JavaScript XML 的简写，表示在JavaScript代码中写HTML格式的代码</p><p>优势：声明式语法更加直观，与HTML结构相同，降低了学习成本，提升开发效率</p><p>2 优化</p><p>sql: 搜索商品，sql语句   select * from t_product where pid=1 join order  join user</p><p>开发时，0.2 t_product 1000-&gt;1000000数据 1分钟</p><p>优化不能时效，功能性ok，非功能性(时效)</p><p>没有加索引字段，减少关联查询</p><p>代码：命名是否标准，shangping , sp, 异常抛出(吞了)，for</p><p>结构：项目mvc  解耦  工作细分，前端、后端、DBA、，mvc后端</p><p>view前端传数据(react,vue,jsp)-&gt;接口-&gt;后端（controller:接收参数，不处理具体逻辑-&gt;service(model)来处理业务逻辑-&gt;dao数据层-db)</p><p>3.注意点</p><p>1）React元素的属性名使用驼峰命名法</p><p>ctrl+shift+I 打调试工具</p><p>2）如果没有子节点的React元素可以用 <code>/&gt;</code> 来结束</p><html><head>    <title></title></head><body><p>​<h1></h1></p><pre><code>&lt;div&gt;    &lt;span&gt;abc&lt;/span&gt;&lt;/div&gt;</code></pre></body></html><p>3)推荐使用小括号包裹JSX，从而避免JS中自动插入分号报错</p><p>4  嵌入JS表达式</p><p>知识不是孤岛，新的知识与旧的联系，效率高。</p><p>JSX是来描述页面的结构，我们一般在编写业务逻辑渲染页面的时候，需要涉及到传递值，调用函数，判断条件，循环等，这一些在JSX中都能得到支持。</p><p>jsp servlet</p><p>servlet:去数据库取数据user,userList</p><p>jsp页面展示内容：</p><p>-用户姓名｛<a href="http://user.name">user.name</a>},{name}</p><p>-用户列表 userList-&gt;for-&gt;{<a href="http://user.name">user.name</a>｝</p><p>react也做展示数据</p><p>表达式{name},展示用户列表for</p><p>5.条件渲染</p><p>页面 sex性别：男  女</p><p>数据库：user表sex 字段 什么类型-int varchar  int 0女 1男</p><p>controller: sex 0/1-&gt;{sex} 0/1-&gt;if</p><p>订单表中订单状态：state 下单 1 退单 2 异常 3</p><p>员工表员工状态:int  0 离职 1在职 2休假 3 4 5</p><p>loading场景：客户在和后台发出数据请求，因为网络或数据多，给一个loading,数据正在加载中。</p><p>产品经理，站在用户立场去思考应用的设计。</p><p>一般在定义boolean flag=false;</p><p>&amp;&amp;在什么场景下？</p><p>&amp; 与，针对位 ，不多（源代码 hashmap)</p><p>&amp;&amp;  用户登录-&gt;username,password-&gt;tom,123 短路操作</p><p>与：0*1=0</p><p>if(username.equals(“tom”))&amp;&amp;password.equals(“123”)&amp;&amp;password.equals(“123”)&amp;&amp;password.equals(“123”){</p><p>//登录成功</p><p>}</p><p>写代码语法糖，很不好懂。</p><p>6.列表渲染</p><p>使用数组map()</p><p>map:key和vaue，数据结构，手机号码</p><p>item:当读取第一条数据时，数据放变量，item当前读取出来的那条数据， item就是一项， temp临时变量，要考虑名字意义。</p><p>7.总结</p><p>- JSX是React的核心内容</p><p>- JSX表示在JS代码中写HTML结构，是React声明式的体现</p><p>- 使用JSX配合嵌入的JS表达式、条件渲染、列表渲染、可以描述任意UI结构</p><p>- 推荐使用className的方式给JSX添加样式</p><p>- React完全利用JS语言自身的能力来编写UI，而不是造轮子增强HTML功能</p><p>轮子：A项目中做权限管理（做成模块）， B 和C也要用，不需要再开发权限管理，直接引进来。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;一、学习目标&lt;/h1&gt;
+&lt;p&gt;知道什么是JSX&lt;/p&gt;
+&lt;p&gt;能够使用JSX创建React元素（注意jsx的使用细节）&lt;/p&gt;
+&lt;p&gt;能够在JSX中使用JavaScript表达式&lt;/p&gt;
+&lt;p&gt;能够使用JSX的条件渲染和列表渲染&lt;/p&gt;
+&lt;p&gt;能够给JSX添加样式&lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="JSX" scheme="https://blog.jyzhpu.com/tags/JSX/"/>
+    
+  </entry>
+  
+  <entry>
     <title>react环境搭建笔记</title>
     <link href="https://blog.jyzhpu.com/posts/eba36bf7.html"/>
     <id>https://blog.jyzhpu.com/posts/eba36bf7.html</id>
@@ -131,33 +158,6 @@
     
     
     <category term="react" scheme="https://blog.jyzhpu.com/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JSX语法</title>
-    <link href="https://blog.jyzhpu.com/posts/33a5a810.html"/>
-    <id>https://blog.jyzhpu.com/posts/33a5a810.html</id>
-    <published>2021-07-20T07:22:14.000Z</published>
-    <updated>2023-07-19T10:10:55.299Z</updated>
-    
-    <content type="html"><![CDATA[<h1>一、学习目标</h1><p>知道什么是JSX</p><p>能够使用JSX创建React元素（注意jsx的使用细节）</p><p>能够在JSX中使用JavaScript表达式</p><p>能够使用JSX的条件渲染和列表渲染</p><p>能够给JSX添加样式</p><h1>二、JSX概述</h1><p>1 jsx产生的原因</p><p>代码比较繁琐</p><p>结构不直观</p><p>无法一眼看出描述的结构，不优雅</p><p>用户体验不好</p><p>jsp servlet做一个表格-&gt; out.write(“<html>…</html>”)</p><p>index.css</p><p>.abc{</p><p>}</p><p>html-&gt;<div class="abc"></p><p>jsx与html很像，但是有区别， <div className="abc"></p><h2 id="Shopping-list">Shopping list</h2><p>.instagram</p><p>.whatsApp</p><p>JSX是JavaScript XML 的简写，表示在JavaScript代码中写HTML格式的代码</p><p>优势：声明式语法更加直观，与HTML结构相同，降低了学习成本，提升开发效率</p><p>2 优化</p><p>sql: 搜索商品，sql语句   select * from t_product where pid=1 join order  join user</p><p>开发时，0.2 t_product 1000-&gt;1000000数据 1分钟</p><p>优化不能时效，功能性ok，非功能性(时效)</p><p>没有加索引字段，减少关联查询</p><p>代码：命名是否标准，shangping , sp, 异常抛出(吞了)，for</p><p>结构：项目mvc  解耦  工作细分，前端、后端、DBA、，mvc后端</p><p>view前端传数据(react,vue,jsp)-&gt;接口-&gt;后端（controller:接收参数，不处理具体逻辑-&gt;service(model)来处理业务逻辑-&gt;dao数据层-db)</p><p>3.注意点</p><p>1）React元素的属性名使用驼峰命名法</p><p>ctrl+shift+I 打调试工具</p><p>2）如果没有子节点的React元素可以用 <code>/&gt;</code> 来结束</p><html><head>    <title></title></head><body><p>​<h1></h1></p><pre><code>&lt;div&gt;    &lt;span&gt;abc&lt;/span&gt;&lt;/div&gt;</code></pre></body></html><p>3)推荐使用小括号包裹JSX，从而避免JS中自动插入分号报错</p><p>4  嵌入JS表达式</p><p>知识不是孤岛，新的知识与旧的联系，效率高。</p><p>JSX是来描述页面的结构，我们一般在编写业务逻辑渲染页面的时候，需要涉及到传递值，调用函数，判断条件，循环等，这一些在JSX中都能得到支持。</p><p>jsp servlet</p><p>servlet:去数据库取数据user,userList</p><p>jsp页面展示内容：</p><p>-用户姓名｛<a href="http://user.name">user.name</a>},{name}</p><p>-用户列表 userList-&gt;for-&gt;{<a href="http://user.name">user.name</a>｝</p><p>react也做展示数据</p><p>表达式{name},展示用户列表for</p><p>5.条件渲染</p><p>页面 sex性别：男  女</p><p>数据库：user表sex 字段 什么类型-int varchar  int 0女 1男</p><p>controller: sex 0/1-&gt;{sex} 0/1-&gt;if</p><p>订单表中订单状态：state 下单 1 退单 2 异常 3</p><p>员工表员工状态:int  0 离职 1在职 2休假 3 4 5</p><p>loading场景：客户在和后台发出数据请求，因为网络或数据多，给一个loading,数据正在加载中。</p><p>产品经理，站在用户立场去思考应用的设计。</p><p>一般在定义boolean flag=false;</p><p>&amp;&amp;在什么场景下？</p><p>&amp; 与，针对位 ，不多（源代码 hashmap)</p><p>&amp;&amp;  用户登录-&gt;username,password-&gt;tom,123 短路操作</p><p>与：0*1=0</p><p>if(username.equals(“tom”))&amp;&amp;password.equals(“123”)&amp;&amp;password.equals(“123”)&amp;&amp;password.equals(“123”){</p><p>//登录成功</p><p>}</p><p>写代码语法糖，很不好懂。</p><p>6.列表渲染</p><p>使用数组map()</p><p>map:key和vaue，数据结构，手机号码</p><p>item:当读取第一条数据时，数据放变量，item当前读取出来的那条数据， item就是一项， temp临时变量，要考虑名字意义。</p><p>7.总结</p><p>- JSX是React的核心内容</p><p>- JSX表示在JS代码中写HTML结构，是React声明式的体现</p><p>- 使用JSX配合嵌入的JS表达式、条件渲染、列表渲染、可以描述任意UI结构</p><p>- 推荐使用className的方式给JSX添加样式</p><p>- React完全利用JS语言自身的能力来编写UI，而不是造轮子增强HTML功能</p><p>轮子：A项目中做权限管理（做成模块）， B 和C也要用，不需要再开发权限管理，直接引进来。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;一、学习目标&lt;/h1&gt;
-&lt;p&gt;知道什么是JSX&lt;/p&gt;
-&lt;p&gt;能够使用JSX创建React元素（注意jsx的使用细节）&lt;/p&gt;
-&lt;p&gt;能够在JSX中使用JavaScript表达式&lt;/p&gt;
-&lt;p&gt;能够使用JSX的条件渲染和列表渲染&lt;/p&gt;
-&lt;p&gt;能够给JSX添加样式&lt;/p&gt;</summary>
-      
-    
-    
-    
-    
-    <category term="JSX" scheme="https://blog.jyzhpu.com/tags/JSX/"/>
     
   </entry>
   
