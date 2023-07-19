@@ -6,7 +6,7 @@
   <link href="https://blog.jyzhpu.com/atom.xml" rel="self"/>
   
   <link href="https://blog.jyzhpu.com/"/>
-  <updated>2022-10-23T14:00:00.000Z</updated>
+  <updated>2023-07-19T09:54:34.860Z</updated>
   <id>https://blog.jyzhpu.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo踩坑</title>
+    <link href="https://blog.jyzhpu.com/posts/undefined.html"/>
+    <id>https://blog.jyzhpu.com/posts/undefined.html</id>
+    <published>2023-07-19T07:22:14.000Z</published>
+    <updated>2023-07-19T09:54:34.860Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-关于hexo框架，本地预览是有背景的，上传之后就没有背景的问题。">1 关于hexo框架，本地预览是有背景的，上传之后就没有背景的问题。</h2><p>得先重新生成一下css文件,再上传</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure><h2 id="2-关于hexo部署github时hexo-d成功，但github仍显示初始页面问题">2 关于hexo部署github时hexo d成功，但github仍显示初始页面问题</h2><p>如果你的_config.yml文件下为：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>可以将master改为main：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 仓库地址</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p>然后</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;1-关于hexo框架，本地预览是有背景的，上传之后就没有背景的问题。&quot;&gt;1 关于hexo框架，本地预览是有背景的，上传之后就没有背景的问题。&lt;/h2&gt;
+&lt;p&gt;得先重新生成一下css文件,再上传&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>直播插入</title>
